@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterComponent } from './pages/register/register.component';
 import {
   provideHttpClient,
   withInterceptorsFromDi,
@@ -14,7 +15,7 @@ import {
 import { HttpTokenInterceptor } from './services/interceptor/http-token.interceptor';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),

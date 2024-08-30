@@ -1,0 +1,107 @@
+<section class="vh-120 light-background">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-10 col-lg-8 col-xl-6">
+        <div class="card custom-card">
+          <div class="card-body p-5 text-black">
+            <form [formGroup]="signupForm" (ngSubmit)="register()">
+              <div class="d-flex align-items-center mb-3 pb-1">
+                <i class="fas fa-user-plus fa-2x custom-icon"></i>
+                <span class="h1 fw-bold mb-0 custom-heading">Register</span>
+              </div>
+
+              <h5 class="fw-normal mb-4" style="letter-spacing: 1px;">
+                Create your account
+              </h5>
+
+
+              <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+                <p *ngFor="let msg of errorMsg">{{ msg }}</p>
+              </div>
+
+
+              <div class="row mb-4">
+                <div class="col-md-6 mb-3">
+                  <div class="form-outline">
+                    <input formControlName="firstname" type="text" id="form2ExampleFirstName"
+                      class="form-control form-control-lg custom-input" placeholder="Firstname" />
+                    <label class="form-label" for="form2ExampleFirstName">Firstname</label>
+                    <span *ngIf="signupForm.get('firstname')?.touched && signupForm.get('firstname')?.invalid"
+                      class="error-message">
+                      Firstname is required
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-outline">
+                    <input formControlName="lastname" type="text" id="form2ExampleLastName"
+                      class="form-control form-control-lg custom-input" placeholder="Lastname" />
+                    <label class="form-label" for="form2ExampleLastName">Lastname</label>
+                    <span *ngIf="signupForm.get('lastname')?.touched && signupForm.get('lastname')?.invalid"
+                      class="error-message">
+                      Lastname is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-md-12 mb-3">
+                  <div class="form-outline">
+                    <input formControlName="email" type="email" id="form2ExampleEmail"
+                      class="form-control form-control-lg custom-input" placeholder="name@example.com" />
+                    <label class="form-label" for="form2ExampleEmail">Email address</label>
+
+                    <span *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid"
+                      class="error-message">
+                      Please enter a valid email address
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-md-12 mb-3 position-relative">
+                  <div class="form-outline position-relative mb-3">
+                    <input [type]="password" id="form2ExamplePassword" class="form-control form-control-lg custom-input"
+                      placeholder="Password" formControlName="password" />
+                    <button type="button" (click)="onClick()"
+                      style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+                      <i class="fa" [ngClass]="{'fa-eye': !show, 'fa-eye-slash': show}" aria-hidden="true"></i>
+                    </button>
+
+                  </div>
+                  <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid"
+                    class="error-messages mt-2">
+                    <span *ngIf="signupForm.get('password')?.errors?.['minlength']" class="text-danger">Password must
+                      contain at least 12 characters</span>
+                    <span *ngIf="signupForm.get('password')?.errors?.['pattern']" class="text-danger">Password must
+                      contain at least one number, one uppercase letter, one lowercase letter, and one special
+                      character</span>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="pt-1 mb-4">
+                <button class="btn btn-lg btn-block custom-button" type="submit" data-mdb-ripple-init>
+                  Create an account
+                </button>
+              </div>
+
+              <p class="mb-5 pb-lg-2" style="color: #333333;">
+                Already have an account?
+                <button (click)="login()" type="button" class="btn btn-link custom-link" data-mdb-ripple-init>
+                  Login
+                </button>
+              </p>
+              <a href="#!" class="small text-muted">Terms of use.</a>
+              <a href="#!" class="small text-muted">Privacy policy</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

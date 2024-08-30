@@ -1,0 +1,88 @@
+.light-background {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e5e9 100%);
+  }
+  
+  .custom-card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-icon {
+    color: #FF8C00; 
+  }
+  
+  .custom-heading {
+    color: #00BFFF; 
+  }
+  
+  .custom-input {
+    border-radius: 10px;
+    background-color: #f7f9fc;
+    border: 1px solid #d0d7de;
+  }
+  
+  .custom-button {
+    background: linear-gradient(135deg, #00BFFF 0%, #FF8C00 100%);
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: none; 
+  }
+  
+  .custom-button:hover {
+    background: linear-gradient(135deg, #FF8C00 0%, #00BFFF 100%);
+    transform: scale(1.05);
+  }
+  
+  .custom-link {
+    color: #FF8C00;
+  }
+  
+  .form-row {
+    margin-bottom: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-outline {
+    position: relative;
+  }
+  
+  .form-label {
+    top: 0;
+    left: 0;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .input-group {
+    position: relative;
+  }
+  
+  .password-toggle-icon i {
+    color: #666;
+  }
+  
+  .password-toggle-icon:hover i {
+    color: #00BFFF;
+  }
+  
+  .input-group-text.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: -2; 
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.875rem;
+  }
+  
