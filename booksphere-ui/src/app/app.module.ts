@@ -2,11 +2,13 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CodeInputModule } from 'angular-code-input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './pages/register/register.component';
+import { ActivateAccountComponent } from './pages/activate-account/activate-account.component';
 import {
   provideHttpClient,
   withInterceptorsFromDi,
@@ -15,8 +17,19 @@ import {
 import { HttpTokenInterceptor } from './services/interceptor/http-token.interceptor';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    ActivateAccountComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    CodeInputModule,
+    ReactiveFormsModule,
+  ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
     {
