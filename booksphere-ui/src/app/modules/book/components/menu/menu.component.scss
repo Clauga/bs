@@ -1,116 +1,4 @@
-// li > a {
-//   &:hover {
-//     background-color: #d6e5f1;
-//     border-radius: 5px;
-//     text-decoration: underline;
-//   }
-//   &.active {
-//     color: #e98324;
-//     border-radius: 5px;
-//   }
-// }
-// .navbar {
-//   background: linear-gradient(90deg, #161718, #f27610);
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   padding: 1rem;
-//   backdrop-filter: blur(8px) brightness(1.2);
-//   -webkit-backdrop-filter: blur(8px) brightness(1.2);
 
-//   .navbar-brand {
-//     font-weight: 500;
-//     text-transform: uppercase;
-//     color: #fff;
-//   }
-
-//   .navbar-toggler {
-//     border-color: rgba(255, 255, 255, 0.1);
-//   }
-
-//   .navbar-toggler-icon {
-//     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-//   }
-
-//   .collapse.show {
-//     animation: fadeIn 0.5s ease-in-out;
-//   }
-
-//   @keyframes fadeIn {
-//     from {
-//       opacity: 0;
-//     }
-//     to {
-//       opacity: 1;
-//     }
-//   }
-
-//   .navbar-nav {
-//     .nav-link {
-//       position: relative;
-//       color: #fff;
-//       font-weight: 500;
-//       transition: color 0.3s ease-in-out;
-//       padding: 0.5rem 1rem;
-
-//       &:hover,
-//       &.active {  
-//         color: #ffc107;
-//         background-color: transparent;
-
-//         &::after {
-//           width: 100%;
-//           left: 0;
-//           background-color: #ffc107;
-//         }
-//       }
-
-//       &::after {
-//         content: '';
-//         position: absolute;
-//         width: 0;
-//         height: 2px;
-//         display: block;
-//         margin-top: 5px;
-//         right: 0;
-//         background: #ffc107;
-//         transition: width 0.3s ease-in-out;
-//       }
-//     }
-//   }
-
-//   .custom-search-btn {
-//     background-color: #f7f4ee; 
-//     color: #181212; 
-//     border: none; 
-//     padding: 0.25rem 0.5rem; 
-//     border-radius: 50px; 
-//     &:hover {
-//       background-color: #ffc107;
-//       color: #fff;
-//       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-//     }
-//   }
-
-//   .text-capitalize.fw-bold {
-//     color: #fff;
-//     font-size: 1.1rem;
-//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-//   }
-
-//   .form-control {
-//     border-radius: 20px;
-//   }
-
-//   .btn-link {
-//     color: #ffc107;
-
-//     &:hover {
-//       color: #fff;
-//     }
-//   }
-// }
-
-
-// Variables de color
 $primary-color: #00BFFF;
 $secondary-color: #FF8C00;
 $background-color: #F0F4F8;
@@ -120,9 +8,9 @@ $hover-text-color: #00BFFF;
 $button-gradient: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
 $button-hover-gradient: linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
 $active-color: $secondary-color;
-$logout-color: #FF8C00; // Color original del logout
+$logout-color: #FF8C00; 
 
-// Estilos generales
+
 .custom-body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
@@ -130,7 +18,7 @@ $logout-color: #FF8C00; // Color original del logout
   background-color: $background-color;
 }
 
-// Estilos del navbar
+
 .custom-navbar {
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -164,8 +52,8 @@ $logout-color: #FF8C00; // Color original del logout
     .custom-navbar-nav {
       list-style: none;
       display: flex;
-      justify-content: center; // Asegura que los elementos estén centrados
-      gap: 30px; // Más espacio entre los elementos
+      justify-content: center; 
+      gap: 30px; 
       padding: 0;
       margin: 0;
 
@@ -247,7 +135,7 @@ $logout-color: #FF8C00; // Color original del logout
         .custom-logout-btn {
           background: none;
           border: none;
-          color: $logout-color; // Restaurar el color del logout
+          color: $logout-color; 
           cursor: pointer;
 
           &:hover {
@@ -259,7 +147,7 @@ $logout-color: #FF8C00; // Color original del logout
   }
 }
 
-// Diseño responsivo
+
 @media (max-width: 768px) {
   .custom-navbar-toggler {
     display: block;

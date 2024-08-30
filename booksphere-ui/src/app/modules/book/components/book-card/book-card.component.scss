@@ -10,40 +10,37 @@ i {
 }
 
 .card {
-  // Tamaño fijo para la tarjeta
-  width: 18rem;
-  height: 100%; // Asegura que la tarjeta mantenga el tamaño uniforme
 
-  // Estilo de transición para hover
+  width: 18rem;
+  height: 100%; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  // Efecto hover para tarjetas
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-  // Estilo de imagen
-  .card-img-top {
-    height: 200px;
-    width: 100%; // Asegura que la imagen cubra todo el ancho de la tarjeta
-    object-fit: scale-down; 
-  }
 
-  // Estilo del cuerpo de la tarjeta
+.card-img-top {
+    height: 200px;
+    width: 100%; 
+    object-fit: scale-down; 
+}
+
+
   .card-body {
     display: flex;
     flex-direction: column;
-    overflow: hidden; // Asegura que el contenido no desborde
+    overflow: hidden; 
 
-    // Asegura que el texto se ajuste y no desborde
-    .card-text {
+ 
+  .card-text {
       text-overflow: ellipsis;
 
     }
   }
-  // Estilo del pie de la tarjeta
-  .card-footer {
+
+.card-footer {
     background-color: #f8f9fa;
     border-top: 1px solid #ddd;
     display: flex;
@@ -64,39 +61,6 @@ i {
     }
   }
 
-  // Estilo del borde dinámico
-  // &.border-success {
-  //   border: 2px solid #28a745; // Color verde para libros compartidos
-  // }
-
-  // &.border-warning {
-  //   border: 2px solid #ffc107; // Color amarillo para libros archivados
-  // }
-  // &.border-success {
-  //   border: 2px solid transparent; // Borde transparente para permitir el gradiente
-  //   background-image: linear-gradient(white, white), linear-gradient(45deg, #28a745, #a7ff83);
-  //   background-origin: border-box;
-  //   background-clip: content-box, border-box;
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  //   transition: transform 0.3s ease;
-  // }
-  
-  // &.border-success:hover {
-  //   transform: scale(1.05); // Aumenta ligeramente el tamaño al hacer hover
-  // }
-  
-  // &.border-warning {
-  //   border: 2px solid transparent; // Borde transparente para permitir el gradiente
-  //   background-image: linear-gradient(white, white), linear-gradient(45deg, #ffc107, #ffecb3);
-  //   background-origin: border-box;
-  //   background-clip: content-box, border-box;
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  //   transition: transform 0.3s ease;
-  // }
-  
-  // &.border-warning:hover {
-  //   transform: scale(1.05); // Aumenta ligeramente el tamaño al hacer hover
-  // }
   .status-icon {
     position: absolute;
     top: 10px;
@@ -115,5 +79,4 @@ i {
   .icon-warning {
     background-color: #ffc107;
   }
-
 }
