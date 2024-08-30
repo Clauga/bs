@@ -1,0 +1,151 @@
+<!-- <div class="container-fluid card login-container">
+    <h3 class="text-center">Login</h3>
+    <hr>
+    <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+        <p *ngFor="let msg of errorMsg">{{errorMsg}}</p>
+    </div>
+    <div class="mb-3">
+        <label for="login" class="form-label">Email address</label>
+        <input [(ngModel)]="authRequest.email" type="email" class="form-control" id="login"
+            placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input [(ngModel)]="authRequest.password" type="password" class="form-control" id="password"
+            placeholder="Password">
+    </div>
+    <div class="d-flex justify-content-between mb-3">
+        <button (click)="login()" type="button" class="btn btn-primary">
+            <em class="fas fa-sign-in-alt">&nbsp;Sign in</em>
+        </button>
+        <div>
+            Don't have an account?&nbsp;
+            <button (click)="register()" type="button" class="btn btn-link">
+                Register
+            </button>
+        </div>
+    </div>
+</div> -->
+
+<!-- <section class="vh-120" style="background-color: #0e0d0d;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0" style="height: 100%;">
+                        <div class="col-md-6 col-lg-5 d-none d-md-block">
+                            <img src="https://images.unsplash.com/photo-1535905496755-26ae35d0ae54?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="login form" class="img-fluid"
+                                style="border-radius: 1rem 0 0 1rem; height: 100%;" />
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+                                <form (ngSubmit)="login()">
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                        <i class="fas fa-sign-in-alt fa-2x me-3" style="color: #ff6219;"></i>
+                                        <span class="h1 fw-bold mb-0">Login</span>
+                                    </div>
+
+                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+                                        Sign into your account
+                                    </h5>
+
+                                    <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+                                        <p *ngFor="let msg of errorMsg">{{ msg }}</p>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input [(ngModel)]="authRequest.email" type="email" id="login"
+                                            class="form-control form-control-lg" placeholder="name@example.com" required
+                                            name="email" />
+                                        <label class="form-label" for="login">Email address</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input [(ngModel)]="authRequest.password" type="password" id="password"
+                                            class="form-control form-control-lg" placeholder="Password" required
+                                            name="password" />
+                                        <label class="form-label" for="password">Password</label>
+                                    </div>
+
+                                    <div class="pt-1 mb-4">
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit"
+                                            data-mdb-ripple-init>
+                                            Sign in
+                                        </button>
+                                    </div>
+
+                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">
+                                        Don't have an account?
+                                        <button (click)="register()" type="button" class="btn btn-link"
+                                            style="color: #393f81;" data-mdb-ripple-init>
+                                            Register here
+                                        </button>
+                                    </p>
+                                    <a href="#!" class="small text-muted">Forgot password?</a>
+                                    <a href="#!" class="small text-muted">Privacy policy</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="vh-100 light-background">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="card custom-card">
+                    <div class="card-body p-5 text-black">
+                        <form (ngSubmit)="login()">
+                            <div class="d-flex align-items-center mb-3 pb-1">
+                                <i class="fas fa-sign-in-alt fa-2x custom-icon"></i>
+                                <span class="h1 fw-bold mb-0 custom-heading">Login</span>
+                            </div>
+
+                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+                                Welcome back! Please login to your account.
+                            </h5>
+
+                            <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+                                <p *ngFor="let msg of errorMsg">{{ msg }}</p>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="authRequest.email" type="email" id="login"
+                                    class="form-control form-control-lg custom-input" placeholder="name@example.com"
+                                    required name="email" />
+                                <label class="form-label" for="login">Email address</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="authRequest.password" type="password" id="password"
+                                    class="form-control form-control-lg custom-input" placeholder="Password" required
+                                    name="password" />
+                                <label class="form-label" for="password">Password</label>
+                            </div>
+
+                            <div class="pt-1 mb-4">
+                                <button class="btn btn-lg btn-block custom-button" type="submit">
+                                    Sign in
+                                </button>
+                            </div>
+
+                            <p class="mb-5 pb-lg-2" style="color: #333333;">
+                                Don't have an account?
+                                <button (click)="register()" type="button" class="btn btn-link custom-link">
+                                    Register here
+                                </button>
+                            </p>
+                            <a href="#!" class="small text-muted">Forgot password?</a>
+                            <a href="#!" class="small text-muted">Privacy policy</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
