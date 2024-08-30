@@ -1,21 +1,21 @@
 .pagination .page-item .page-link {
-    color: #333; /* Color del texto del número de página */
-    background-color: #F0F4F8; /* Color de fondo del cuadro */
-    border: 1px solid #D1D5DB; /* Color del borde */
-    border-radius: 0.25rem; /* Bordes redondeados para un diseño más suave */
-    padding: 0.5rem 0.75rem; /* Espaciado interno */
+    color: #333;
+    background-color: #F0F4F8; 
+    border: 1px solid #D1D5DB; 
+    border-radius: 0.25rem; 
+    padding: 0.5rem 0.75rem; 
   }
   
   .pagination .page-item.active .page-link {
-    color: #FFF; /* Color del texto para la página activa */
-    background-color: #00BFFF; /* Color de fondo para la página activa */
-    border-color: #00BFFF; /* Color del borde para la página activa */
+    color: #FFF; 
+    background-color: #00BFFF; 
+    border-color: #00BFFF;
   }
   
   .pagination .page-item .page-link:hover,
   .pagination .page-item .page-link:focus {
-    color: #00BFFF; /* Color del texto al hacer hover o focus */
-    background-color: #E0E7FF; /* Color de fondo al hacer hover o focus */
-    border-color: #00BFFF; /* Color del borde al hacer hover o focus */
+    color: #00BFFF; 
+    background-color: #E0E7FF; 
+    border-color: #00BFFF; 
   }
   

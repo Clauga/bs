@@ -24,8 +24,8 @@ export class ManageBookComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
-  // en este componente se implementa la funcionalidad para crear un libro y guardarlo en la base de datos
-  //este ngOnInit lo que hace es que si se recibe un id de libro, se busca el libro en la base de datos y se carga en el formulario
+  // in this component we have a form to create a new book or edit an existing one
+  //this ngOnInit is used to get the book id from the url and load the book data into the form
   ngOnInit(): void {
     const bookId = this.activatedRoute.snapshot.params['bookId'];
     if (bookId) {
@@ -33,7 +33,7 @@ export class ManageBookComponent implements OnInit {
         .findBookById({
           'book-id': bookId,
         })
-        //suscribe nos sirve para obtener el libro y cargarlo en el formulario, lo que tenemos que hacer es convertir el libro (bookResponse) a un BookRequest
+        //we suscribe to the observable to get the book data and set it to the form
         .subscribe({
           next: (book) => {
             this.bookRequest = {
@@ -49,7 +49,7 @@ export class ManageBookComponent implements OnInit {
         });
     }
   }
-  //saveBook lo que hace es que guarda el libro en la base de datos y luego guarda la imagen de la portada del libro
+  //saveBook is used to save the book data into the server
   saveBook() {
     this.bookService
       .saveBook({
@@ -76,7 +76,7 @@ export class ManageBookComponent implements OnInit {
         },
       });
   }
-  //onFileSelected lo que hace es que cuando se selecciona una imagen, se guarda en la variable selectedBookCover y se muestra en la vista
+  //onFileSelected is used to get the selected file from the input file and set it to the form
   onFileSelected(event: any) {
     this.selectedBookCover = event.target.files[0];
     console.log(this.selectedBookCover);

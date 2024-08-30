@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class BookListComponent implements OnInit {
   bookResponse: PageResponseBookResponse = {};
-  //bookResponse corresponde a la respuesta que se obtiene de la peticion de los libros y lo unicializo como un valor vacio
+  //bookResponse is the response from the server, it contains the list of books and the total number of pages
   page = 0;
   size = 10;
   pages: any = [];
@@ -19,13 +19,13 @@ export class BookListComponent implements OnInit {
   level: 'success' | 'error' = 'success';
 
   constructor(private bookService: BookService, private router: Router) {}
-  //para cargar todos los libros cuando abro la pagina
+  //ngOninit is a lifecycle hook that is called after Angular has initialized all data-bound properties of a directive
   ngOnInit(): void {
     this.findAllBooks();
   }
 
   private findAllBooks() {
-    //este metodo se encarga de traer todos los libros
+    //this method is for getting all the books from the server
     this.bookService
       .findAllBooks({
         page: this.page,
@@ -69,7 +69,7 @@ export class BookListComponent implements OnInit {
   get isLastPage() {
     return this.page === (this.bookResponse.totalPages as number) - 1;
   }
-  //metodo para agregar un libro a la lista de libros prestados, funciona con el id del libro, y cuando se agrega se muestra un mensaje de exito
+  //this method id for borrow a book, the way to borrow a book is to send a request to the server with the book id
   borrowBook(book: BookResponse) {
     this.message = '';
     this.level = 'success';

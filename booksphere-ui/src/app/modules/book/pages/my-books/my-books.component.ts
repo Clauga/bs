@@ -16,7 +16,7 @@ export class MyBooksComponent implements OnInit {
   pages: any = [];
 
   constructor(private bookService: BookService, private router: Router) {}
-  //en este caso el ngOnInit  lo que hace es que llama al metodo findAllBooks para que muestre los libros del usuario
+  //here we call the findAllBooks method to get the books from the server
   ngOnInit(): void {
     this.findAllBooks();
   }
@@ -89,7 +89,7 @@ export class MyBooksComponent implements OnInit {
         },
       });
   }
-  //este metodo lo que hace es que redirige a la pagina de manage para editar el libro
+  //this method is used to edit a book, it navigates to the manage book page with the book id
   editBook(book: BookResponse) {
     this.router.navigate(['books', 'manage', book.id]);
   }

@@ -12,15 +12,15 @@ import { FeedbackService } from '../../../../services/services/feedback.service'
   styleUrls: ['./borrowed-book-list.component.scss'],
 })
 export class BorrowedBookListComponent implements OnInit {
-  //se hace la iniciliazacion de las variables que se van a utilizar, page y size para la paginacion
+  //this is the borrowedBooks response from the server, it contains the list of borrowed books and the total number of pages
   page = 0;
-  size = 5;
+  size = 10;
   pages: any = [];
   borrowedBooks: PageResponseBorrowedBookResponse = {};
   selectedBook: BookResponse | undefined = undefined;
   feedbackRequest: FeedbackRequest = { bookId: 0, comment: '', note: 0 };
 
-  //se necesita el sercio de bookService para obtener los libros prestados
+  //we inject the bookService and feedbackService to be able to use their methods
   constructor(
     private bookService: BookService,
     private feedbackService: FeedbackService
@@ -76,10 +76,10 @@ export class BorrowedBookListComponent implements OnInit {
 
   returnBorrowedBook(book: BorrowedBookResponse) {
     this.selectedBook = book;
-    //debemos asignar el id del libro que se va a devolver para dar feedback
+    //we set the bookId in the feedbackRequest object
     this.feedbackRequest.bookId = book.id as number;
   }
-  //este metodo funciona para devolver el libro prestado, lo que se hace es llamar al servicio de bookService y se le pasa el id del libro que se va a devolver
+  //this method is for returning a book, the way to return a book is to send a request to the server with the book id
   returnBook(withFeedback: boolean) {
     this.bookService
       .returnBorrowBook({
