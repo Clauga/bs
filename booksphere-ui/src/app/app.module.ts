@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-
+import { LoginComponent } from './pages/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 import {
   provideHttpClient,
   withInterceptorsFromDi,
@@ -13,8 +14,8 @@ import {
 import { HttpTokenInterceptor } from './services/interceptor/http-token.interceptor';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  declarations: [AppComponent, LoginComponent],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
     {
