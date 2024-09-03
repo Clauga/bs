@@ -1,8 +1,9 @@
 package com.bsn.booksphere.book;
 
-import com.bsn.book.file.FileUtils;
-import com.bsn.book.history.BookTransactionHistory;
-import com.bsn.book.user.User;
+
+import com.bsn.booksphere.file.FileUtils;
+import com.bsn.booksphere.history.BookTransactionHistory;
+import com.bsn.booksphere.user.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

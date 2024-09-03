@@ -1,10 +1,11 @@
 package com.bsn.booksphere.book;
 
-import com.bsn.book.common.PageResponse;
-import com.bsn.book.file.FileStorageService;
-import com.bsn.book.history.BookTransactionHistory;
-import com.bsn.book.history.BookTransactionHistoryRepository;
-import com.bsn.book.user.User;
+
+import com.bsn.booksphere.common.PageResponse;
+import com.bsn.booksphere.file.FileStorageService;
+import com.bsn.booksphere.history.BookTransactionHistory;
+import com.bsn.booksphere.history.BookTransactionHistoryRepository;
+import com.bsn.booksphere.user.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -20,8 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
