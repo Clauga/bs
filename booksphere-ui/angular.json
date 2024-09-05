@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "booksphere-ui": {
+    "BOOK-NETWORK-UI": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/booksphere-ui",
+            "outputPath": "dist/book-network-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "booksphere-ui:build:production"
+              "buildTarget": "BOOK-NETWORK-UI:build:production"
             },
             "development": {
-              "buildTarget": "booksphere-ui:build:development"
+              "buildTarget": "BOOK-NETWORK-UI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

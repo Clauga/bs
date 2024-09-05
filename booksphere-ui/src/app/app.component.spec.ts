@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'booksphere-ui' title`, () => {
+  it(`should have the 'BOOK-NETWORK-UI' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('booksphere-ui');
+    expect(app.title).toEqual('BOOK-NETWORK-UI');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, booksphere-ui');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, BOOK-NETWORK-UI');
   });
 });
